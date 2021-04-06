@@ -1,0 +1,11 @@
+<app-jumbotron></app-jumbotron>
+
+<ul class="list-group">
+    <li *ngFor="let item of alumnos" class="list-group-item">{{item}}</li>
+</ul>
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-6 mt-2" *ngFor="let item of cardsArticle">
+        <app-card [articulo]="item" (addNewStudent)="addAlumno($event)"></app-card>
+    </div>
+</div>
